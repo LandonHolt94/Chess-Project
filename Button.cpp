@@ -1,4 +1,5 @@
 #include "Button.h"
+//Used button class
 Button::Button(int x, int y, SDL_Renderer* renderer) :m_sRect{ x,y,80,80 }, m_dRect{ x,y,80,80 }
 {
 	m_piece = NULL;

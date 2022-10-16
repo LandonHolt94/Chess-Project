@@ -151,6 +151,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Button.h" />
+    <ClInclude Include="CheckAdvanced.h" />
+    <ClInclude Include="CheckEnd.h" />
+    <ClInclude Include="CheckStart.h" />
+    <ClInclude Include="CheckTie.h" />
+    <ClInclude Include="CheckWin.h" />
+    <ClInclude Include="Constants.h" />
+    <ClInclude Include="CreateGrid.h" />
+    <ClInclude Include="DisplayGrid.h" />
+    <ClInclude Include="PlayerInCheck.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
