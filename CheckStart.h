@@ -1,4 +1,5 @@
 #pragma once
+//Keeps track oh the starting button clicked.
 bool Check_Start(char Grid[][8], char x, char y, char player)
 {
 	char pos = Grid[x][y];

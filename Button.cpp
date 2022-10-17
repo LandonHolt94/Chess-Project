@@ -36,15 +36,15 @@ void Button::Getposition(int* x, int* y)
 
 SDL_Texture* Button::Getmtexture()
 {
-	return m_T;
+	return m_T; //Main texture
 }
 SDL_Texture* Button::Getstexture()
 {
-	return m_Ts;
+	return m_Ts; //Second art texture
 }
 SDL_Texture* Button::Getauxtexture()
 {
-	return m_aux;
+	return m_aux;  //Auxiliary texture
 }
 
 void Button::Settexture(SDL_Texture* t)
@@ -62,7 +62,7 @@ bool Button::Getselected()
 	return m_selected;
 }
 
-void Button::Setdead()
+void Button::Setdead() 
 {
 	m_dRect.w = 0;
 	m_dRect.h = 0;

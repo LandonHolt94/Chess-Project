@@ -21,19 +21,11 @@ int main(int argc, char* argv[])
 	tie = false;
 	player = WHITE_PLAYER;
 
-
+	//Creats our grid for the board
 	Create_Grid(Grid);
 	Display_Grid(Grid);
 
 	SDL_Window* window = nullptr;
-
-	if (SDL_Init(SDL_INIT_VIDEO) < 0) {
-		std::cout << "SDL could not be initialized: " <<
-			SDL_GetError();
-	}
-	else {
-		std::cout << "SDL video system is ready to go\n";
-	}
 
 	window = SDL_CreateWindow("CHESS", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_W, SCREEN_H, SDL_WINDOW_SHOWN);
 	SDL_Renderer* renderer = nullptr;
@@ -59,12 +51,12 @@ int main(int argc, char* argv[])
 	SDL_Rect mouse;
 	mouse.w = 1;
 	mouse.h = 1;
-	//Create pieces
+	//Create the pieces
 	Button* pieces[32];
-	//Black pieces
+	//Black pieces local variables
 	{
-		pieces[0] = new Button(80 * 5, 0, renderer);
-		pieces[0]->Setpiece('r');
+		pieces[0] = new Button(80 * 5, 0, renderer); //Render piece through button function
+		pieces[0]->Setpiece('r'); //Shows what this peces is assigned too
 		pieces[0]->Setposition(0, 0);
 
 		pieces[7] = new Button(80 * 5, 0, renderer);
@@ -101,7 +93,7 @@ int main(int argc, char* argv[])
 		pieces[i]->Setpiece('p');
 		pieces[i]->Setposition(80 * (i - 8), 80);
 	}
-	//White pieces
+	//White pieces local variables
 	{
 		pieces[16] = new Button(80 * 5, 0, renderer, 'w');
 		pieces[16]->Setpiece('R');
@@ -172,7 +164,7 @@ int main(int argc, char* argv[])
 		// Event loop
 		while (SDL_PollEvent(&event))
 		{
-			// Handle each event
+			// Handle each event on grid
 			if (event.type == SDL_QUIT)
 			{
 				gameIsRunning = false;
@@ -294,6 +286,8 @@ int main(int argc, char* argv[])
 			player = player % 2 + 1;
 		}
 	}
+	//Checks each piece location to determine if game is "which player has won or if game has been tied.
+
 	Display_Grid(Grid);
 	if (gameIsRunning == true)
 	{

@@ -1,5 +1,5 @@
 #pragma once
-
+//using constant Chars to store the memory of each piece on the grid.
 const char WHITE_ROOK = 'R';
 const char WHITE_PAWN = 'P';
 const char WHITE_HORSE = 'H';
@@ -32,6 +32,7 @@ const char HORIZONTAL_LINE = -51;
 const char WHITE_PLAYER = 1;
 const char BLACK_PLAYER = 2;
 
+//How we can change our windo size to fit the board.
 const int SCREEN_H = 640;
 const int SCREEN_W = 640;
 

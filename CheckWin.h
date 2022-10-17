@@ -164,7 +164,7 @@ bool Check_Win(char Grid[][8], char player)
 					{
 						if (Grid[j][q] == BLACK_PAWN)
 						{
-							//Forward Pawn Move (haven t checked if double starting move works)
+							//Forward Pawn Move (havent checked if double starting move works)
 							if (j + 1 < 8 && Grid[j + 1][q] == EMPTY_SQUARE)
 							{
 								Grid[j + 1][q] = BLACK_PAWN;

@@ -1,5 +1,5 @@
 #pragma once
-
+//The starting position of each piece on the board.
 void Create_Grid(char Grid[][8])
 {
 	//Create Empty Board
@@ -10,13 +10,13 @@ void Create_Grid(char Grid[][8])
 			Grid[i][j] = EMPTY_SQUARE;
 		}
 	}
-	//Setup Pieces
+	//Setup Pieces on the grid.
 	for (int i = 0; i < 8; i++)
 	{
 		Grid[1][i] = BLACK_PAWN;
 		Grid[6][i] = WHITE_PAWN;
 	}
-	Grid[0][0] = BLACK_ROOK;
+	Grid[0][0] = BLACK_ROOK; 
 	Grid[0][1] = BLACK_HORSE;
 	Grid[0][2] = BLACK_BISHOP;
 	Grid[0][3] = BLACK_QUEEN;

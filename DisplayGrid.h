@@ -1,7 +1,7 @@
 #pragma once
 void Display_Grid(char Grid[][8])
 {
-	system("CLS");
+	system("CLS"); //Invoking an operating system command 
 	std::cout << "    ";
 	for (int j = 0; j < 8; j++)
 		std::cout << (char)(j + 97) << " ";
