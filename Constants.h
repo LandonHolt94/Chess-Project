@@ -1,5 +1,6 @@
 #pragma once
 //using constant Chars to store the memory of each piece on the grid.
+//Upper repersents White Pieces
 const char WHITE_ROOK = 'R';
 const char WHITE_PAWN = 'P';
 const char WHITE_HORSE = 'H';
@@ -7,6 +8,7 @@ const char WHITE_BISHOP = 'B';
 const char WHITE_QUEEN = 'Q';
 const char WHITE_KING = 'K';
 
+//lowercase represents black pieces
 const char BLACK_ROOK = 'r';
 const char BLACK_PAWN = 'p';
 const char BLACK_HORSE = 'h';
