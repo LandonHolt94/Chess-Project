@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
 
 	SDL_Window* window = nullptr;
 
-	window = SDL_CreateWindow("CHESS", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_W, SCREEN_H, SDL_WINDOW_SHOWN);
+	window = SDL_CreateWindow("Chess Game Project", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_W, SCREEN_H, SDL_WINDOW_SHOWN);
 	SDL_Renderer* renderer = nullptr;
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
@@ -56,7 +56,7 @@ int main(int argc, char* argv[])
 	//Black pieces local variables
 	{
 		pieces[0] = new Button(80 * 5, 0, renderer); //Render piece through button function
-		pieces[0]->Setpiece('r'); //Shows what this peces is assigned too
+		pieces[0]->Setpiece('r'); //Shows where the pieces are assigned too. 
 		pieces[0]->Setposition(0, 0);
 
 		pieces[7] = new Button(80 * 5, 0, renderer);
@@ -185,8 +185,8 @@ int main(int argc, char* argv[])
 			if (pieceSelected == -1 && Check_Start(Grid, x, y, player))
 			{
 				if (player == WHITE_PLAYER)
-					std::cout << "----White to move(UPERCASE)----" << std::endl;
-				else std::cout << "----Black to move(lowercase)----" << std::endl;
+					std::cout << "---White to move---" << std::endl;
+				else std::cout << "---Black to move---" << std::endl;
 
 				std::cout << "Choose the piece you want to move:  " << std::endl;
 
@@ -194,7 +194,7 @@ int main(int argc, char* argv[])
 				{
 					if (pieces[i]->collision(mouse) == SDL_TRUE)
 					{
-						std::cout << "Piece detected :" << pieces[i]->Getpiece() << std::endl;
+						std::cout << "Piece identified:" << pieces[i]->Getpiece() << std::endl;
 						SDL_Texture* t = pieces[i]->Getstexture();
 						pieces[i]->Settexture(t);
 						pieceSelected = i;

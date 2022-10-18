@@ -7,7 +7,7 @@
 class Button
 {
 
-
+	//Accessible from outside of the class.
 public:
 
 	Button(int x, int y, SDL_Renderer* renderer);
@@ -32,9 +32,9 @@ public:
 	SDL_bool collision(SDL_Rect mouse);
 	//Draw
 	void draw(SDL_Renderer* renderer);
-
-private:
-
+	
+	//Cannot be viewed outside of class.
+private: 
 
 	bool m_selected;
 	char m_piece;

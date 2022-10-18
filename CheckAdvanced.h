@@ -1,5 +1,4 @@
 #pragma once
-#pragma once
 bool Check_ADVANCED(char Grid[][8], char x, char y, char j, char z, char player, Button* pieces[])
 {
 	char piece = Grid[x][y];
@@ -11,6 +10,7 @@ bool Check_ADVANCED(char Grid[][8], char x, char y, char j, char z, char player,
 	char en_passant = 'z';
 	char aux, aux_piece;
 	int m;
+
 	//Basic movement and Captures
 	switch (piece)
 	{
@@ -50,7 +50,7 @@ bool Check_ADVANCED(char Grid[][8], char x, char y, char j, char z, char player,
 		//check promote
 		if (j == 0 || j == 7)
 		{
-			std::cout << "What do you want to promote to?" << std::endl;
+			std::cout << "Choose one of the following to promote." << std::endl;
 			std::cout << "Queen (Q/q) Bishop (B/b) Horse (H/h) Rook (R/r)" << std::endl;
 			std::cin >> piece;
 			bool white_promote = (player == WHITE_PLAYER && (piece == WHITE_HORSE || piece == WHITE_BISHOP || piece == WHITE_QUEEN || piece == WHITE_ROOK));
@@ -62,7 +62,7 @@ bool Check_ADVANCED(char Grid[][8], char x, char y, char j, char z, char player,
 				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 				system("CLS");
 				Display_Grid(Grid);
-				std::cout << "What do you want to promote to?" << std::endl;
+				std::cout << "Choose one of the following to promote." << std::endl;
 				std::cout << "Queen (Q/q) Bishop (B/b) Horse (H/h) Rook (R/r)" << std::endl;
 				std::cout << "Insert Correct data" << std::endl;
 				std::cin >> piece;
@@ -171,6 +171,7 @@ bool Check_ADVANCED(char Grid[][8], char x, char y, char j, char z, char player,
 		//Basic movement
 		if (abs(j - x) > 1 || abs(y - z) > 2 || (abs(y - z) > 1 && y != 4))
 			return false;
+		
 		//Castle
 		if (abs(y - z) == 2 && abs(j - x) == 0 && (x == 0 || x == 7) && y == 4)
 		{
@@ -309,7 +310,7 @@ bool Check_ADVANCED(char Grid[][8], char x, char y, char j, char z, char player,
 		break;
 	}
 CHECK_CHECK:
-	//We simulate the move on the actual Grid but if the move is not posible we goto restore and we change the grid again.
+	//We simulate the move on the actual grid but if the move is not posible we goto restore and we change the grid again.
 	Grid[x][y] = EMPTY_SQUARE;
 	aux_piece = Grid[j][z];
 	Grid[j][z] = piece;

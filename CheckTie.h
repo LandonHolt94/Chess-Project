@@ -47,7 +47,8 @@ bool Check_Tie(char Grid[][8], char player)
 							Grid[x][y] = piece;
 							Grid[x - 1][y + 1] = obj1;
 						}
-						//check en passant
+						//check en passant(in passing)						
+						//pawn capturing 
 						if (obj1 == EMPTY_SQUARE && x == 3 && (Grid[x][y + 1] == BLACK_PAWN && BLACK_EN_PASSANT == y + 1))
 						{
 							aux = Grid[x][y + 1];
@@ -66,7 +67,7 @@ bool Check_Tie(char Grid[][8], char player)
 							Grid[x][y + 1] = aux;
 						}
 					}
-					//check capture left + en passant left
+					//check capture left + en passant left 
 					if (y - 1 >= 0)
 					{
 						obj2 = Grid[x - 1][y - 1];

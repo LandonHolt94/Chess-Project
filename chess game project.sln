@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "chess game SDL", "chess game SDL.vcxproj", "{D5BB5F4C-2B02-457D-8207-5AD41DCE35B6}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chess Board Game", "chess game SDL.vcxproj", "{D5BB5F4C-2B02-457D-8207-5AD41DCE35B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,8 +13,8 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D5BB5F4C-2B02-457D-8207-5AD41DCE35B6}.Debug|x64.ActiveCfg = Debug|x64
-		{D5BB5F4C-2B02-457D-8207-5AD41DCE35B6}.Debug|x64.Build.0 = Debug|x64
+		{D5BB5F4C-2B02-457D-8207-5AD41DCE35B6}.Debug|x64.ActiveCfg = Release|x64
+		{D5BB5F4C-2B02-457D-8207-5AD41DCE35B6}.Debug|x64.Build.0 = Release|x64
 		{D5BB5F4C-2B02-457D-8207-5AD41DCE35B6}.Debug|x86.ActiveCfg = Debug|Win32
 		{D5BB5F4C-2B02-457D-8207-5AD41DCE35B6}.Debug|x86.Build.0 = Debug|Win32
 		{D5BB5F4C-2B02-457D-8207-5AD41DCE35B6}.Release|x64.ActiveCfg = Release|x64
