@@ -35,9 +35,6 @@
     <ClInclude Include="CheckStart.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CheckTie.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CheckWin.h">
       <Filter>Header Files</Filter>
     </ClInclude>

@@ -7,7 +7,6 @@
 #include "PlayerInCheck.h"
 #include "CheckAdvanced.h"
 #include "CheckEnd.h"
-#include "CheckTie.h"
 #include "CheckWin.h"
 
 int main(int argc, char* argv[])
@@ -282,7 +281,6 @@ int main(int argc, char* argv[])
 		if (cont == true)
 		{
 			win = Check_Win(Grid, player);
-			tie = Check_Tie(Grid, player);
 			player = player % 2 + 1;
 		}
 	}

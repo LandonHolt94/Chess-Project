@@ -154,7 +154,6 @@
     <ClInclude Include="CheckAdvanced.h" />
     <ClInclude Include="CheckEnd.h" />
     <ClInclude Include="CheckStart.h" />
-    <ClInclude Include="CheckTie.h" />
     <ClInclude Include="CheckWin.h" />
     <ClInclude Include="Constants.h" />
     <ClInclude Include="CreateGrid.h" />
